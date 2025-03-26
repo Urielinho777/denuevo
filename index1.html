@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NASA</title>
-  <!-- Ruta relativa al archivo CSS -->
+  <title>NASA - Imagen del Día</title>
+  <!-- Asegúrate de que el archivo styles.css esté en la misma carpeta que index1.html -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Imagen del Día NASA APOD</h1>
+  <h1>Imagen del Día - NASA APOD</h1>
   <button onclick="obtenerImagen()">Cargar Imagen</button>
   <h2 id="titulo"></h2>
   <p id="descripcion"></p>
   <img id="imagen" src="" alt="Imagen del Día de la NASA">
+  
+  <!-- Botón para volver a la página principal -->
+  <button onclick="location.href='/'">Volver a la página principal</button>
 
   <script>
     async function obtenerImagen() {
       try {
         const response = await fetch("/apod");
+        if (!response.ok) {
+          throw new Error("Error en la respuesta del servidor");
+        }
         const data = await response.json();
-
         document.getElementById("titulo").innerText = data.title;
         document.getElementById("descripcion").innerText = data.explanation;
         document.getElementById("imagen").src = data.url;
