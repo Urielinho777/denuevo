@@ -1,9 +1,8 @@
 {
   "name": "act2",
   "version": "1.0.0",
-  "main": "server.js",  // Cambiar a "server.js" si ese es tu archivo principal
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",  // Asegúrate de que esto apunte al archivo correcto
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
