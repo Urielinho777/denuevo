@@ -10,7 +10,8 @@ const NASA_API_KEY = process.env.NASA_API_KEY || "API_KEY"; // API Key aquí
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+// Sirve archivos estáticos desde la raíz del proyecto
+app.use(express.static(__dirname));
 
 // Obtener la imagen del día (APOD)
 app.get("/apod", async (req, res) => {
@@ -27,7 +28,11 @@ app.get("/apod", async (req, res) => {
 // Ruta principal que muestra el HTML
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
+});
 
+// Ruta para index1.html (si lo necesitas para redirección)
+app.get("/index1", (req, res) => {
+  res.sendFile(path.join(__dirname, "index1.html"));
 });
 
 app.listen(PORT, () => {
