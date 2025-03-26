@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imágenes de la NASA y el Espacio</title>
-    <style>
-        /* Estilos generales */
-        body {
-            background-color: #0b0d17;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        /* Título principal */
-        h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ffffff;
-            background: linear-gradient(90deg, #ffffff, #00aaff, #ffffff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-        /* Botón de carga */
-        button {
-            background-color: #0077ff;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
-        }
-        button:hover {
-            background-color: #005bb5;
-            transform: scale(1.05);
-        }
-        /* Estilos para la imagen */
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 90%;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-            animation: fadeIn 1s ease-in-out;
-        }
-        /* Títulos y descripción */
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 15px;
-            color: #00aaff;
-        }
-        p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 10px auto;
-            color: #d0d0d0;
-        }
-        /* Efecto futurista al cargar la imagen */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imágenes de la NASA y el Espacio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      background-color: #0b0d17;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Título principal */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #ffffff, #00aaff, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    /* Botón de carga */
+    button {
+      background-color: #0077ff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #005bb5;
+      transform: scale(1.05);
+    }
+    /* Estilos para la imagen */
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+    /* Títulos y descripción */
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 15px;
+      color: #00aaff;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 10px auto;
+      color: #d0d0d0;
+    }
+    /* Efecto futurista al cargar la imagen */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Explorando el Espacio con la NASA</h1>
-    <p>La NASA captura imágenes asombrosas del espacio exterior, desde galaxias lejanas hasta nebulosas coloridas y planetas misteriosos.</p>
-    <p>Estas imágenes nos ayudan a comprender mejor el universo y sus maravillas.</p>
-    <button onclick="location.href='index1.html'">Ir a ver imágenes de la NASA</button>
+  <h1>Explorando el Espacio con la NASA</h1>
+  <p>La NASA captura imágenes asombrosas del espacio exterior, desde galaxias lejanas hasta nebulosas coloridas y planetas misteriosos.</p>
+  <p>Estas imágenes nos ayudan a comprender mejor el universo y sus maravillas.</p>
+  <!-- Si usas la ruta definida en Express, redirige a /index1 -->
+  <button onclick="location.href='/index1'">Ir a ver imágenes de la NASA</button>
 </body>
 </html>
